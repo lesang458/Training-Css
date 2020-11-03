@@ -1,0 +1,32 @@
+.search-container {
+  display: flex;
+  align-content: center;
+  margin: 28px 28px 0 28px;
+
+  .search-icon {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 50px;
+    height: 60px;
+    background: #ffffff;
+    border: 2px solid #dbdbdb;
+    border-right: none;
+    box-sizing: border-box;
+    border-radius: 5px 0 0 5px;
+  }
+
+  .search-input {
+    flex: 1;
+    height: 60px;
+    background: #ffffff;
+    border: 2px solid #dbdbdb;
+    border-left: none;
+    box-sizing: border-box;
+    border-radius: 0 5px 5px 0;
+  }
+
+  .logo {
+    margin-left: 28px;
+  }
+}

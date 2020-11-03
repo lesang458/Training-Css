@@ -1,0 +1,72 @@
+.conversation-container {
+  display: flex;
+  margin-bottom: 10px;
+
+  .user-avatar {
+    min-width: 50px;
+    position: relative;
+
+    .second-avatar {
+      position: absolute;
+      top: 6px;
+      left: 12px;
+    }
+
+    .actived-badge {
+      content: ' ';
+      background: #34d377;
+      border-radius: 50%;
+      position: absolute;
+      width: 13px;
+      height: 13px;
+      top: 0;
+      left: 36px;
+    }
+
+    .badge {
+      position: absolute;
+      width: 13px;
+      height: 13px;
+      top: 29px;
+      left: 36px;
+      background: $pinkColor;
+      border-radius: 50%;
+      font-family: Roboto;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+    }
+  }
+
+  .message-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-left: 5px;
+    .name-container {
+      display: flex;
+      align-content: center;
+      div {
+        font-family: Roboto;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.25px;
+        color: $blackText;
+      }
+      h4 {
+        margin-left: auto;
+        align-self: center;
+      }
+    }
+
+    h4 {
+      margin: 0;
+      font-weight: 400;
+    }
+  }
+}

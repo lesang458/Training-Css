@@ -1,43 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="resources/scss/style.css">
-  <body>
-    <div class="container">
-      <div class="side-bar">
-        <div class="nav-icon">
-          <img src="resources/img/left-arrow.svg" alt="Left arrow">
-        </div>
-        <div class="profile">
-          <img src="resources/img/avatar.svg" alt="Avatar" class="avatar-img">
-          <div class="profile-content">
-            <p>Hi, Karin</p>
-            <a href="">View my profile</a>
-          </div>
-        </div>
-        <ul class="main-menu">
-          <li><img src="resources/img/home-icon.svg" alt="Home icon"><div class="content active">Home</div></li>
-          <li><img src="resources/img/chat-icon.svg" alt="Chat icon"><div class="content">Chat</div></li>
-          <li><div class="badge">3</div><img src="resources/img/event-icon.svg" alt="Event icon"><div class="content">Events</div></li>
-          <li><img src="resources/img/user-icon.svg" alt="Users icon"><div class="content">Users</div></li>
-        </ul>
-
-        <ul class="main-menu">
-          <li><img src="resources/img/user-icon.svg" alt="Users icon"><div class="content">User Management</div></li>
-          <li><img src="resources/img/hopital-icon.svg" alt="Chat icon"><div class="content">Hopital Management</div></li>
-          <li><img src="resources/img/topic-icon.svg" alt="Event icon"><div class="content">Topic Management</div></li>
-        </ul>
-        <div class="logout">
-          <img src="resources/img/logout-icon.svg" alt="Chat icon"><div class="content">Logout</div>
-        </div>
+   <head>
+      <meta charset="utf-8">
+      <title>Draft Roche</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="resources/scss/style.css">
+   <body>
+      <div class="container">
+         <div class="side-bar">
+            <div class="nav-icon">
+               <img src="resources/img/left-arrow.svg" alt="Left arrow">
+            </div>
+            <div class="profile">
+               <img src="resources/img/avatar.svg" alt="Avatar" class="avatar-img">
+               <div class="profile-content">
+                  <p>Hi, Karin</p>
+                  <a href="">View my profile</a>
+               </div>
+            </div>
+            <ul class="main-menu">
+               <li>
+                  <img src="resources/img/home-icon.svg" alt="Home icon">
+                  <div class="content active">Home</div>
+               </li>
+               <li>
+                  <img src="resources/img/chat-icon.svg" alt="Chat icon">
+                  <div class="content">Chat</div>
+               </li>
+               <li>
+                  <div class="badge">3</div>
+                  <img src="resources/img/event-icon.svg" alt="Event icon">
+                  <div class="content">Events</div>
+               </li>
+               <li>
+                  <img src="resources/img/user-icon.svg" alt="Users icon">
+                  <div class="content">Users</div>
+               </li>
+            </ul>
+            <ul class="main-menu">
+               <li>
+                  <img src="resources/img/user-icon.svg" alt="Users icon">
+                  <div class="content">User Management</div>
+               </li>
+               <li>
+                  <img src="resources/img/hopital-icon.svg" alt="Chat icon">
+                  <div class="content">Hopital Management</div>
+               </li>
+               <li>
+                  <img src="resources/img/topic-icon.svg" alt="Event icon">
+                  <div class="content">Topic Management</div>
+               </li>
+            </ul>
+            <div class="logout">
+               <img src="resources/img/logout-icon.svg" alt="Chat icon">
+               <div class="content">Logout</div>
+            </div>
+         </div>
+         <div class="main">
+            <div class="search-container">
+               <div class="search-icon">
+                  <img src="resources/img/search-icon.svg" alt="Search icon">
+               </div>
+               <input type="text" class="search-input">
+               <img src="resources/img/roche-icon.svg" alt="Logo" class="logo">
+            </div>
+            <div class="search-text">Search for people or groups</div>
+            <div class="main-content">
+              <div class="chat-container">
+                <p>Chat</p>
+                <div class="chat-content">
+                  <div class="search-container">
+                    <div class="search-icon">
+                       <img src="resources/img/search-icon.svg" alt="Search icon">
+                    </div>
+                    <input type="text" class="search-input">
+                    <img src="resources/img/edit-icon.svg" alt="Logo" class="logo">
+                  </div>
+                  <div class="search-text">Search in conversation</div>
+                  <h4>Guided Conversations</h4>
+                  <div class="conversation-container">
+                     <div class="user-avatar">
+                        <img src="resources/img/avatar.svg" alt="User">
+                        <div class="actived-badge"></div>
+                        <div class="badge">1</div>
+                     </div>
+                     <div class="message-container">
+                        <div class="name-container">
+                           <div>Lindsey Stroud</div>
+                           <h4>Yesterday</h4>
+                        </div>
+                        <h4>Danke Karin für die Info</h4>
+                     </div>
+                  </div>
+                  <h4>Open Chats</h4>
+                  <div class="conversation-container">
+                     <img src="resources/img/user-1.svg" alt="User">
+                     <div class="message-container">
+                        <div class="name-container">
+                           <div>Nicci Troiani</div>
+                           <h4>One week ago</h4>
+                        </div>
+                        <h4>Request has been send</h4>
+                     </div>
+                  </div>
+                  <div class="conversation-container">
+                     <div class="user-avatar">
+                        <img src="resources/img/user-2.svg" alt="User" width="32" height="32">
+                        <img src="resources/img/user-3.svg" alt="User" width="32" height="32" class="second-avatar">
+                     </div>
+                     <div class="message-container">
+                        <div class="name-container">
+                           <div>Anna Riklin, Xixi</div>
+                           <h4>One week ago</h4>
+                        </div>
+                        <h4>Ich habe hier ein tolle Bindetechnik für ein Kopftuch gefunden.</h4>
+                     </div>
+                  </div>
+                  <div class="conversation-container">
+                     <img src="resources/img/user-3.svg" alt="User">
+                     <div class="message-container">
+                        <div class="name-container">
+                           <div>Xixi</div>
+                           <h4>One week ago</h4>
+                        </div>
+                        <h4>Today I had my first therapy. I could be worse honestly.</h4>
+                     </div>
+                  </div>
+                  <div class="conversation-container">
+                     <img src="resources/img/user-1.svg" alt="User">
+                     <div class="message-container">
+                        <div class="name-container">
+                           <div>Nicci Troiani</div>
+                           <h4>1. Sept.</h4>
+                        </div>
+                        <h4>Request has been send</h4>
+                     </div>
+                  </div>
+                </div>
+              </div>
+              <div class="reminder-container">
+                <div class="text-container">
+                  <p>Reminders</p>
+                  <a href="#">See more</a>
+                </div>
+                <div class="available-events">
+                  <div class="date-content">
+                    <div class="day">12</div>
+                    <div class="month">June</div>
+                  </div>
+                  <div class="event-content">
+                    Meet Sabine today in our Stream at 5:00 pm
+                  </div>
+                  <div class="event-img">
+                    <img src="resources/img/avatar.svg" alt="Event Image">
+                  </div>
+                </div>
+                <div class="text-container">
+                  <p>Featured event</p>
+                  <a href="#">All events</a>
+                </div>
+                <div class="featured-event">
+                  <img src="resources/img/featured-event.svg" alt="Featured event" width="100%">
+                  <div class="content">
+                    <p>Connected to supported</p>
+                    <div>Online Event</div>
+                    <p>Fri. 24 of October</p>
+                    <p>Short words to know more about this event.</p>
+                    <button>Show event</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+         </div>
       </div>
-      <div class="main">
-          <div class="search-container">
-            <input type="text" class="search-people">
-          </div>
-      </div>
-    </div>
-  </body>
+   </body>
 </html>

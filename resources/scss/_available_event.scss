@@ -1,0 +1,38 @@
+.date-content {
+  display: flex;
+  background: #e28bae;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  border-radius: 5px 0 0 5px;
+  width: 66px;
+
+  div {
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .day {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 18px;
+  }
+
+  .month {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.event-content {
+  flex: 1;
+  margin-left: 5px;
+  align-self: center;
+}
+
+.event-img {
+  display: flex;
+  align-content: center;
+  padding: 20px;
+}

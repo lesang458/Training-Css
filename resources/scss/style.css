@@ -1,8 +1,10 @@
 html body {
+  font-family: Carmen Sans;
+  font-style: normal;
   width: 100%;
   height: 100%;
   margin: 0;
-  background: #E5E5E5;
+  background: #e5e5e5;
 }
 
 html body .container {
@@ -15,7 +17,7 @@ html body .container {
 
 html body .container .side-bar {
   min-height: 100vh;
-  width: 287px;
+  min-width: 287px;
   left: 0%;
   right: 0%;
   top: 0px;
@@ -27,7 +29,7 @@ html body .container .side-bar {
       -ms-flex-direction: column;
           flex-direction: column;
   border-radius: 0 15px 15px 0;
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 html body .container .side-bar .nav-icon {
@@ -75,7 +77,6 @@ html body .container .side-bar .profile .profile-content {
 html body .container .side-bar .profile .profile-content p {
   margin: 4px 0 4px 0;
   font-family: Carmen Sans;
-  font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 18px;
@@ -84,11 +85,10 @@ html body .container .side-bar .profile .profile-content p {
 
 html body .container .side-bar .profile .profile-content a {
   font-family: Roboto;
-  font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
-  color: #D75F8D;
+  color: #d75f8d;
   text-decoration: none;
 }
 
@@ -115,10 +115,9 @@ html body .container .side-bar .main-menu li .badge {
   height: 13px;
   left: 57px;
   top: 205px;
-  background: #D75F8D;
+  background: #d75f8d;
   border-radius: 50%;
   font-family: Roboto;
-  font-style: normal;
   font-weight: 500;
   font-size: 10px;
   line-height: 12px;
@@ -131,13 +130,12 @@ html body .container .side-bar .main-menu li .badge {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 html body .container .side-bar .main-menu li .content {
   margin: 15px 0 15px 15px;
   font-family: Roboto;
-  font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 18px;
@@ -162,8 +160,6 @@ html body .container .side-bar .logout {
 html body .container .side-bar .logout .content {
   margin: 25px 0 25px 15px;
   font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
   font-size: 18px;
   line-height: 18px;
   color: #262626;
@@ -183,18 +179,381 @@ html body .container .main .search-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 28px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 28px 28px 0 28px;
 }
 
-html body .container .main .search-container .search-people {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 85%;
-          flex: 0 0 85%;
+html body .container .main .search-container .search-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 50px;
   height: 60px;
-  background: #FFFFFF;
-  border: 2px solid #DBDBDB;
+  background: #ffffff;
+  border: 2px solid #dbdbdb;
+  border-right: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  border-radius: 5px 0 0 5px;
+}
+
+html body .container .main .search-container .search-input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 60px;
+  background: #ffffff;
+  border: 2px solid #dbdbdb;
+  border-left: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 0 5px 5px 0;
+}
+
+html body .container .main .search-container .logo {
+  margin-left: 28px;
+}
+
+html body .container .main .search-text {
+  height: 28px;
+  margin-left: 70px;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #747474;
+}
+
+html body .container .main .main-content {
+  margin: 0 28px 28px 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html body .container .main .main-content p {
+  margin: 0;
+  font-family: Carmen Sans;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 31px;
+  color: #000000;
+}
+
+html body .container .main .main-content .chat-container {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 70%;
+          flex: 0 0 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+html body .container .main .main-content .chat-container .chat-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
+  padding: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+html body .container .main .main-content .chat-container .chat-content .search-container {
+  margin: 0;
+}
+
+html body .container .main .main-content .chat-container .chat-content .search-container .search-icon {
+  height: 50px;
+}
+
+html body .container .main .main-content .chat-container .chat-content .search-container .search-input {
+  height: 50px;
+}
+
+html body .container .main .main-content .chat-container .chat-content .search-text {
+  margin-left: 40px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+html body .container .main .main-content .chat-container .chat-content h4 {
+  margin: 0 0 10px 0;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.15px;
+  color: #747474;
+}
+
+html body .container .main .main-content .chat-container .chat-content .conversation-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+html body .container .main .main-content .chat-container .chat-content .conversation-container .user-avatar {
+  min-width: 50px;
+  position: relative;
+}
+
+html body .container .main .main-content .chat-container .chat-content .conversation-container .user-avatar .second-avatar {
+  position: absolute;
+  top: 6px;
+  left: 12px;
+}
+
+html body .container .main .main-content .chat-container .chat-content .conversation-container .user-avatar .actived-badge {
+  content: ' ';
+  background: #34d377;
+  border-radius: 50%;
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  top: 0;
+  left: 36px;
+}
+
+html body .container .main .main-content .chat-container .chat-content .conversation-container .user-avatar .badge {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  top: 29px;
+  left: 36px;
+  background: #d75f8d;
+  border-radius: 50%;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #ffffff;
+}
+
+html body .container .main .main-content .chat-container .chat-content .conversation-container .message-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 5px;
+}
+
+html body .container .main .main-content .chat-container .chat-content .conversation-container .message-container .name-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+html body .container .main .main-content .chat-container .chat-content .conversation-container .message-container .name-container div {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.25px;
+  color: #262626;
+}
+
+html body .container .main .main-content .chat-container .chat-content .conversation-container .message-container .name-container h4 {
+  margin-left: auto;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+html body .container .main .main-content .chat-container .chat-content .conversation-container .message-container h4 {
+  margin: 0;
+  font-weight: 400;
+}
+
+html body .container .main .main-content .reminder-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 28px;
+}
+
+html body .container .main .main-content .reminder-container .text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html body .container .main .main-content .reminder-container .text-container a {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: right;
+  color: #d75f8d;
+  text-decoration: none;
+  margin-left: auto;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+html body .container .main .main-content .reminder-container .available-events {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  margin-bottom: 28px;
+}
+
+html body .container .main .main-content .reminder-container .available-events .date-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #e28bae;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  border-radius: 5px 0 0 5px;
+  width: 66px;
+}
+
+html body .container .main .main-content .reminder-container .available-events .date-content div {
+  text-align: center;
+  color: #ffffff;
+}
+
+html body .container .main .main-content .reminder-container .available-events .date-content .day {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 18px;
+}
+
+html body .container .main .main-content .reminder-container .available-events .date-content .month {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+html body .container .main .main-content .reminder-container .available-events .event-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 5px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+html body .container .main .main-content .reminder-container .available-events .event-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 20px;
+}
+
+html body .container .main .main-content .reminder-container .featured-event {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+
+html body .container .main .main-content .reminder-container .featured-event .content {
+  margin: 20px;
+}
+
+html body .container .main .main-content .reminder-container .featured-event .content p {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0.15px;
+  color: #828282;
+}
+
+html body .container .main .main-content .reminder-container .featured-event .content div {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 21px;
+  margin-bottom: 10px;
+  letter-spacing: 0.25px;
+}
+
+html body .container .main .main-content .reminder-container .featured-event .content button {
+  cursor: pointer;
+  margin-top: 10px;
+  height: 50px;
+  padding: 0 20px;
+  background: #d75f8d;
+  border-radius: 40px;
+  border: none;
+  -webkit-box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.05);
+  color: #ffffff;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
 }
 /*# sourceMappingURL=style.css.map */
