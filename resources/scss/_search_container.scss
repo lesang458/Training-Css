@@ -1,7 +1,7 @@
 .search-container {
   display: flex;
   align-content: center;
-  margin: 28px 28px 0 28px;
+  margin: 28px;
 
   .search-icon {
     display: flex;
@@ -28,5 +28,9 @@
 
   .logo {
     margin-left: 28px;
+  }
+
+  .home {
+    display: none;
   }
 }

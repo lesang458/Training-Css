@@ -13,7 +13,7 @@
     flex-direction: column;
 
     .search-container {
-      margin: 0;
+      margin: 0 0 28px 0;
       .search-icon {
         height: 50px;
       }
@@ -21,12 +21,6 @@
       .search-input {
         height: 50px;
       }
-    }
-
-    .search-text {
-      margin-left: 40px;
-      font-size: 14px;
-      line-height: 16px;
     }
 
     h4 {

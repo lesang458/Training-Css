@@ -1,99 +1,134 @@
-.nav-icon {
-  cursor: pointer;
+.side-bar {
+  min-height: 100vh;
+  width: 287px;
+  left: 0%;
+  right: 0%;
+  top: 0px;
   display: flex;
-  justify-content: flex-end;
-  margin-top: 10px;
-  margin-right: 10px;
-}
-
-.profile {
-  display: flex;
-  margin-left: 20px;
-
-  .avatar-img {
-    margin-right: 10px;
-    align-self: center;
+  flex-direction: column;
+  border-radius: 0 15px 15px 0;
+  background: #ffffff;
+  transition: width 0.4s;
+  .nav-icon {
     cursor: pointer;
-    background-blend-mode: normal;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
-  }
-
-  .profile-content {
     display: flex;
-    flex-direction: column;
-    align-content: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+    margin-right: 10px;
 
-    p {
-      margin: 4px 0 4px 0;
-      font-family: Carmen Sans;
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 18px;
-      color: $blackText;
-    }
-
-    a {
-      font-family: Roboto;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 18px;
-      color: $pinkColor;
-      text-decoration: none;
+    img {
+      transition: 0.4s transform ease-in-out;
     }
   }
-}
 
-.main-menu {
-  list-style: none;
-  li {
+  .profile {
     display: flex;
-    flex-direction: row;
-    align-content: center;
-    padding: 0px;
+    margin-left: 20px;
 
-    .badge {
-      position: absolute;
-      width: 13px;
-      height: 13px;
-      left: 57px;
-      top: 205px;
-      background: $pinkColor;
-      border-radius: 50%;
-      font-family: Roboto;
-      font-weight: 500;
-      font-size: 10px;
-      line-height: 12px;
+    .avatar-img {
+      margin-right: 10px;
+      align-self: center;
+      cursor: pointer;
+      background-blend-mode: normal;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+    }
+
+    .profile-content {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #ffffff;
-    }
+      flex-direction: column;
+      align-content: center;
 
+      p {
+        margin: 4px 0 4px 0;
+        font-family: Carmen Sans;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 18px;
+        color: $blackText;
+      }
+
+      a {
+        font-family: Roboto;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+        color: $pinkColor;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .main-menu {
+    list-style: none;
+    li {
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      padding: 0px;
+      margin: 20px 0;
+
+      .badge {
+        position: absolute;
+        width: 13px;
+        height: 13px;
+        left: 57px;
+        top: 205px;
+        background: $pinkColor;
+        border-radius: 50%;
+        font-family: Roboto;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+      }
+
+      .content {
+        margin-left: 15px;
+        font-family: Roboto;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 18px;
+        color: $grayText;
+      }
+      .active {
+        color: $blackText;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .logout {
+    margin-top: auto;
+    display: flex;
+    align-content: center;
+    padding-left: 40px;
+    margin-bottom: 25px;
     .content {
-      margin: 15px 0 15px 15px;
+      margin-left: 15px;
       font-family: Roboto;
-      font-weight: 500;
       font-size: 18px;
       line-height: 18px;
-      color: $grayText;
-    }
-    .active {
       color: $blackText;
-      font-weight: bold;
+      align-self: center;
     }
   }
 }
 
-.logout {
-  margin-top: auto;
-  display: flex;
-  align-content: center;
-  padding-left: 40px;
-  .content {
-    margin: 25px 0 25px 15px;
-    font-family: Roboto;
-    font-size: 18px;
-    line-height: 18px;
-    color: $blackText;
+@media only screen and (max-width: 1400px) {
+  .side-bar {
+    width: 95px;
+
+    .profile .profile-content,
+    .main-menu li .content,
+    .logout .content {
+      display: none;
+    }
+
+    .nav-icon img {
+      transform: rotate(-180deg);
+    }
   }
 }

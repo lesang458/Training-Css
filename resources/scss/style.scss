@@ -14,19 +14,8 @@ html {
       margin: 0;
       width: 100%;
       display: flex;
-      .side-bar {
-        min-height: 100vh;
-        min-width: 287px;
-        left: 0%;
-        right: 0%;
-        top: 0px;
-        display: flex;
-        flex-direction: column;
-        border-radius: 0 15px 15px 0;
-        background: #ffffff;
 
-        @import 'sidebar';
-      }
+      @import 'sidebar';
 
       .main {
         flex: 1;
@@ -42,15 +31,6 @@ html {
         }
 
         @import 'search_container';
-        .search-text {
-          height: 28px;
-          margin-left: 70px;
-          font-family: Roboto;
-          font-weight: 500;
-          font-size: 16px;
-          line-height: 19px;
-          color: $grayText;
-        }
 
         .main-content {
           margin: 0 28px 28px 28px;
@@ -106,6 +86,61 @@ html {
         }
 
         @import 'community_container';
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  html body .container {
+    flex-direction: column;
+
+    .side-bar {
+      display: none;
+    }
+
+    .search-container {
+      .home {
+        font-family: Carmen Sans;
+        font-weight: 600;
+        font-size: 34px;
+        line-height: 18px;
+        align-self: center;
+        color: #262626;
+        display: block !important;
+      }
+
+      .search-icon {
+        width: 20px !important;
+        margin-left: auto !important;
+        background: none !important;
+        border: none !important;
+      }
+
+      .search-input {
+        display: none;
+      }
+    }
+
+    .main-content {
+      flex-direction: column;
+
+      .reminder-container {
+        margin-left: 0 !important;
+        margin-top: 28px;
+      }
+    }
+
+    .community-container .community-content {
+      flex-direction: column;
+
+      .image {
+        margin-right: 0 !important;
+        margin-top: 28px;
+
+        div {
+          font-size: 16px !important;
+        }
       }
     }
   }

@@ -17,7 +17,7 @@ html body .container {
 
 html body .container .side-bar {
   min-height: 100vh;
-  min-width: 287px;
+  width: 287px;
   left: 0%;
   right: 0%;
   top: 0px;
@@ -30,6 +30,8 @@ html body .container .side-bar {
           flex-direction: column;
   border-radius: 0 15px 15px 0;
   background: #ffffff;
+  -webkit-transition: width 0.4s;
+  transition: width 0.4s;
 }
 
 html body .container .side-bar .nav-icon {
@@ -42,6 +44,13 @@ html body .container .side-bar .nav-icon {
           justify-content: flex-end;
   margin-top: 10px;
   margin-right: 10px;
+}
+
+html body .container .side-bar .nav-icon img {
+  -webkit-transition: 0.4s -webkit-transform ease-in-out;
+  transition: 0.4s -webkit-transform ease-in-out;
+  transition: 0.4s transform ease-in-out;
+  transition: 0.4s transform ease-in-out, 0.4s -webkit-transform ease-in-out;
 }
 
 html body .container .side-bar .profile {
@@ -107,6 +116,7 @@ html body .container .side-bar .main-menu li {
   -ms-flex-line-pack: center;
       align-content: center;
   padding: 0px;
+  margin: 20px 0;
 }
 
 html body .container .side-bar .main-menu li .badge {
@@ -134,7 +144,7 @@ html body .container .side-bar .main-menu li .badge {
 }
 
 html body .container .side-bar .main-menu li .content {
-  margin: 15px 0 15px 15px;
+  margin-left: 15px;
   font-family: Roboto;
   font-weight: 500;
   font-size: 18px;
@@ -155,14 +165,33 @@ html body .container .side-bar .logout {
   -ms-flex-line-pack: center;
       align-content: center;
   padding-left: 40px;
+  margin-bottom: 25px;
 }
 
 html body .container .side-bar .logout .content {
-  margin: 25px 0 25px 15px;
+  margin-left: 15px;
   font-family: Roboto;
   font-size: 18px;
   line-height: 18px;
   color: #262626;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media only screen and (max-width: 1400px) {
+  html body .container .side-bar {
+    width: 95px;
+  }
+  html body .container .side-bar .profile .profile-content,
+  html body .container .side-bar .main-menu li .content,
+  html body .container .side-bar .logout .content {
+    display: none;
+  }
+  html body .container .side-bar .nav-icon img {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
 }
 
 html body .container .main {
@@ -190,7 +219,7 @@ html body .container .main .search-container {
   display: flex;
   -ms-flex-line-pack: center;
       align-content: center;
-  margin: 28px 28px 0 28px;
+  margin: 28px;
 }
 
 html body .container .main .search-container .search-icon {
@@ -229,14 +258,8 @@ html body .container .main .search-container .logo {
   margin-left: 28px;
 }
 
-html body .container .main .search-text {
-  height: 28px;
-  margin-left: 70px;
-  font-family: Roboto;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 19px;
-  color: #747474;
+html body .container .main .search-container .home {
+  display: none;
 }
 
 html body .container .main .main-content {
@@ -278,7 +301,7 @@ html body .container .main .main-content .chat-container .chat-content {
 }
 
 html body .container .main .main-content .chat-container .chat-content .search-container {
-  margin: 0;
+  margin: 0 0 28px 0;
 }
 
 html body .container .main .main-content .chat-container .chat-content .search-container .search-icon {
@@ -287,12 +310,6 @@ html body .container .main .main-content .chat-container .chat-content .search-c
 
 html body .container .main .main-content .chat-container .chat-content .search-container .search-input {
   height: 50px;
-}
-
-html body .container .main .main-content .chat-container .chat-content .search-text {
-  margin-left: 40px;
-  font-size: 14px;
-  line-height: 16px;
 }
 
 html body .container .main .main-content .chat-container .chat-content h4 {
@@ -615,5 +632,60 @@ html body .container .main .community-container .community-content .image div {
 
 html body .container .main .community-container .community-content .last-image {
   margin-right: 0;
+}
+
+@media only screen and (max-width: 500px) {
+  html body .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  html body .container .side-bar {
+    display: none;
+  }
+  html body .container .search-container .home {
+    font-family: Carmen Sans;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 18px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    color: #262626;
+    display: block !important;
+  }
+  html body .container .search-container .search-icon {
+    width: 20px !important;
+    margin-left: auto !important;
+    background: none !important;
+    border: none !important;
+  }
+  html body .container .search-container .search-input {
+    display: none;
+  }
+  html body .container .main-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  html body .container .main-content .reminder-container {
+    margin-left: 0 !important;
+    margin-top: 28px;
+  }
+  html body .container .community-container .community-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  html body .container .community-container .community-content .image {
+    margin-right: 0 !important;
+    margin-top: 28px;
+  }
+  html body .container .community-container .community-content .image div {
+    font-size: 16px !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */
