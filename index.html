@@ -5,13 +5,14 @@
       <title>Draft Roche</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" type="text/css" href="resources/scss/style.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <body>
       <div class="container">
 
-         <div class="side-bar">
+         <div class="side-bar" id="side-bar">
 
             <div class="nav-icon">
-               <img src="resources/img/left-arrow.svg" alt="Left arrow">
+               <img src="resources/img/left-arrow.svg" alt="Left arrow" class="navigation-icon">
             </div>
             <div class="profile">
                <img src="resources/img/avatar.svg" alt="Avatar" class="avatar-img">
@@ -31,8 +32,10 @@
                   <div class="content">Chat</div>
                </li>
                <li>
-                  <div class="badge">3</div>
-                  <img src="resources/img/event-icon.svg" alt="Event icon">
+                  <div class="image">
+                     <div class="badge">3</div>
+                     <img src="resources/img/event-icon.svg" alt="Event icon">
+                  </div>
                   <div class="content">Events</div>
                </li>
                <li>
@@ -62,15 +65,21 @@
             </div>
          </div>
 
+         <div class="responsive"></div>
+
          <div class="main">
 
             <div class="search-container">
                <div class="home">Home</div>
                <div class="search-icon">
-                  <img src="resources/img/search-icon.svg" alt="Search icon">
+                  <img src="resources/img/search.svg" alt="Search icon">
                </div>
                <input type="text" class="search-input" placeholder="Search for people or groups">
-               <img src="resources/img/roche-icon.svg" alt="Logo" class="logo">
+               <img src="resources/img/roche.svg" alt="Logo" class="logo">
+            </div>
+
+            <div class="mobile-search" class="mobile-search">
+               <input type="text" placeholder="Search for people or groups" class="mobile-search-input">
             </div>
             
             <div class="search-text"></div>
@@ -82,12 +91,12 @@
 
                 <div class="chat-content">
 
-                  <div class="search-container">
-                    <div class="search-icon">
-                       <img src="resources/img/search-icon.svg" alt="Search icon">
+                  <div class="chat-search-container">
+                    <div class="chat-search-icon">
+                       <img src="resources/img/search.svg" alt="Search icon">
                     </div>
-                    <input type="text" class="search-input" placeholder="Search in conversation">
-                    <img src="resources/img/edit-icon.svg" alt="Logo" class="logo">
+                    <input type="text" class="chat-search-input" placeholder="Search in conversation">
+                    <img src="resources/img/edit.svg" alt="Logo" class="logo">
                   </div>
 
                   <h4>Guided Conversations</h4>

@@ -1,22 +1,17 @@
 .side-bar {
   min-height: 100vh;
   width: 287px;
-  left: 0%;
-  right: 0%;
-  top: 0px;
   display: flex;
   flex-direction: column;
   border-radius: 0 15px 15px 0;
   background: #ffffff;
   transition: width 0.4s;
   .nav-icon {
-    cursor: pointer;
     display: flex;
     justify-content: flex-end;
-    margin-top: 10px;
-    margin-right: 10px;
-
+    margin: 10px 10px 10px 0;
     img {
+      cursor: pointer;
       transition: 0.4s transform ease-in-out;
     }
   }
@@ -60,29 +55,43 @@
 
   .main-menu {
     list-style: none;
+    padding: 0;
     li {
+      cursor: pointer;
+      padding: 20px 0 20px 40px;
       display: flex;
       flex-direction: row;
       align-content: center;
-      padding: 0px;
-      margin: 20px 0;
 
-      .badge {
-        position: absolute;
-        width: 13px;
-        height: 13px;
-        left: 57px;
-        top: 205px;
-        background: $pinkColor;
-        border-radius: 50%;
-        font-family: Roboto;
-        font-weight: 500;
-        font-size: 10px;
-        line-height: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #ffffff;
+      &:hover {
+        background: #f9c5da;
+        .content {
+          color: $blackText;
+          font-weight: bold;
+        }
+        svg path {
+          fill: $pinkColor;
+        }
+      }
+      .image {
+        position: relative;
+        .badge {
+          position: absolute;
+          width: 13px;
+          height: 13px;
+          left: 15px;
+          top: 0px;
+          background: $pinkColor;
+          border-radius: 50%;
+          font-family: Roboto;
+          font-weight: 500;
+          font-size: 10px;
+          line-height: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #ffffff;
+        }
       }
 
       .content {
@@ -101,6 +110,7 @@
   }
 
   .logout {
+    cursor: pointer;
     margin-top: auto;
     display: flex;
     align-content: center;
@@ -117,18 +127,42 @@
   }
 }
 
-@media only screen and (max-width: 1400px) {
-  .side-bar {
-    width: 95px;
+.side-bar-minimized {
+  width: 95px !important;
 
-    .profile .profile-content,
-    .main-menu li .content,
-    .logout .content {
-      display: none;
+  .nav-icon {
+    justify-content: center;
+    margin-right: 0;
+    img {
+      transform: rotate(-180deg) !important;
     }
+  }
+  .profile {
+    .profile-content {
+      display: none !important;
+    }
+  }
+  .main-menu {
+    display: flex;
+    flex-direction: column;
+    li {
+      width: 100%;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      padding-left: 0 !important;
 
-    .nav-icon img {
-      transform: rotate(-180deg);
+      .content {
+        display: none !important;
+      }
+    }
+  }
+  .logout {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    .content {
+      display: none !important;
     }
   }
 }

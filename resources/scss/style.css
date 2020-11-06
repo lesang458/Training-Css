@@ -18,9 +18,6 @@ html body .container {
 html body .container .side-bar {
   min-height: 100vh;
   width: 287px;
-  left: 0%;
-  right: 0%;
-  top: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,18 +32,17 @@ html body .container .side-bar {
 }
 
 html body .container .side-bar .nav-icon {
-  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin-top: 10px;
-  margin-right: 10px;
+  margin: 10px 10px 10px 0;
 }
 
 html body .container .side-bar .nav-icon img {
+  cursor: pointer;
   -webkit-transition: 0.4s -webkit-transform ease-in-out;
   transition: 0.4s -webkit-transform ease-in-out;
   transition: 0.4s transform ease-in-out;
@@ -103,9 +99,12 @@ html body .container .side-bar .profile .profile-content a {
 
 html body .container .side-bar .main-menu {
   list-style: none;
+  padding: 0;
 }
 
 html body .container .side-bar .main-menu li {
+  cursor: pointer;
+  padding: 20px 0 20px 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,16 +114,31 @@ html body .container .side-bar .main-menu li {
           flex-direction: row;
   -ms-flex-line-pack: center;
       align-content: center;
-  padding: 0px;
-  margin: 20px 0;
 }
 
-html body .container .side-bar .main-menu li .badge {
+html body .container .side-bar .main-menu li:hover {
+  background: #f9c5da;
+}
+
+html body .container .side-bar .main-menu li:hover .content {
+  color: #262626;
+  font-weight: bold;
+}
+
+html body .container .side-bar .main-menu li:hover svg path {
+  fill: #d75f8d;
+}
+
+html body .container .side-bar .main-menu li .image {
+  position: relative;
+}
+
+html body .container .side-bar .main-menu li .image .badge {
   position: absolute;
   width: 13px;
   height: 13px;
-  left: 57px;
-  top: 205px;
+  left: 15px;
+  top: 0px;
   background: #d75f8d;
   border-radius: 50%;
   font-family: Roboto;
@@ -158,6 +172,7 @@ html body .container .side-bar .main-menu li .active {
 }
 
 html body .container .side-bar .logout {
+  cursor: pointer;
   margin-top: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -179,19 +194,70 @@ html body .container .side-bar .logout .content {
       align-self: center;
 }
 
-@media only screen and (max-width: 1400px) {
-  html body .container .side-bar {
-    width: 95px;
-  }
-  html body .container .side-bar .profile .profile-content,
-  html body .container .side-bar .main-menu li .content,
-  html body .container .side-bar .logout .content {
-    display: none;
-  }
-  html body .container .side-bar .nav-icon img {
-    -webkit-transform: rotate(-180deg);
-            transform: rotate(-180deg);
-  }
+html body .container .side-bar-minimized {
+  width: 95px !important;
+}
+
+html body .container .side-bar-minimized .nav-icon {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 0;
+}
+
+html body .container .side-bar-minimized .nav-icon img {
+  -webkit-transform: rotate(-180deg) !important;
+          transform: rotate(-180deg) !important;
+}
+
+html body .container .side-bar-minimized .profile .profile-content {
+  display: none !important;
+}
+
+html body .container .side-bar-minimized .main-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+html body .container .side-bar-minimized .main-menu li {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 0 !important;
+}
+
+html body .container .side-bar-minimized .main-menu li .content {
+  display: none !important;
+}
+
+html body .container .side-bar-minimized .logout {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html body .container .side-bar-minimized .logout .content {
+  display: none !important;
+}
+
+html body .container .responsive {
+  display: none;
+  width: 95px;
 }
 
 html body .container .main {
@@ -219,7 +285,7 @@ html body .container .main .search-container {
   display: flex;
   -ms-flex-line-pack: center;
       align-content: center;
-  margin: 28px;
+  margin: 28px 28px 0 28px;
 }
 
 html body .container .main .search-container .search-icon {
@@ -262,8 +328,23 @@ html body .container .main .search-container .home {
   display: none;
 }
 
+html body .container .main .mobile-search {
+  margin: 0 28px;
+  display: none;
+}
+
+html body .container .main .mobile-search input {
+  width: 100%;
+  height: 60px;
+  background: #ffffff;
+  border: 2px solid #dbdbdb;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+}
+
 html body .container .main .main-content {
-  margin: 0 28px 28px 28px;
+  margin: 28px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -300,16 +381,49 @@ html body .container .main .main-content .chat-container .chat-content {
           flex-direction: column;
 }
 
-html body .container .main .main-content .chat-container .chat-content .search-container {
+html body .container .main .main-content .chat-container .chat-content .chat-search-container {
   margin: 0 0 28px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
-html body .container .main .main-content .chat-container .chat-content .search-container .search-icon {
+html body .container .main .main-content .chat-container .chat-content .chat-search-container .chat-search-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 50px;
   height: 50px;
+  background: #ffffff;
+  border: 2px solid #dbdbdb;
+  border-right: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px 0 0 5px;
 }
 
-html body .container .main .main-content .chat-container .chat-content .search-container .search-input {
+html body .container .main .main-content .chat-container .chat-content .chat-search-container .chat-search-input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   height: 50px;
+  background: #ffffff;
+  border: 2px solid #dbdbdb;
+  border-left: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 0 5px 5px 0;
+}
+
+html body .container .main .main-content .chat-container .chat-content .chat-search-container .logo {
+  margin-left: 28px;
 }
 
 html body .container .main .main-content .chat-container .chat-content h4 {
@@ -634,7 +748,7 @@ html body .container .main .community-container .community-content .last-image {
   margin-right: 0;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 850px) {
   html body .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -643,6 +757,9 @@ html body .container .main .community-container .community-content .last-image {
   }
   html body .container .side-bar {
     display: none;
+  }
+  html body .container .search-container {
+    margin-bottom: 0 !important;
   }
   html body .container .search-container .home {
     font-family: Carmen Sans;
@@ -656,6 +773,7 @@ html body .container .main .community-container .community-content .last-image {
     display: block !important;
   }
   html body .container .search-container .search-icon {
+    cursor: pointer;
     width: 20px !important;
     margin-left: auto !important;
     background: none !important;
@@ -686,6 +804,22 @@ html body .container .main .community-container .community-content .last-image {
   }
   html body .container .community-container .community-content .image div {
     font-size: 16px !important;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  body .container .side-bar {
+    position: fixed;
+    z-index: 1;
+  }
+  body .container .responsive {
+    display: block !important;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  body .container .mobile-search {
+    display: none !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

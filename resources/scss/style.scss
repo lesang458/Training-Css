@@ -17,6 +17,10 @@ html {
 
       @import 'sidebar';
 
+      .responsive {
+        display: none;
+        width: 95px;
+      }
       .main {
         flex: 1;
         flex-direction: column;
@@ -32,8 +36,21 @@ html {
 
         @import 'search_container';
 
+        .mobile-search {
+          margin: 0 28px;
+          display: none;
+          input {
+            width: 100%;
+            height: 60px;
+            background: #ffffff;
+            border: 2px solid #dbdbdb;
+            box-sizing: border-box;
+            border-radius: 5px;
+          }
+        }
+
         .main-content {
-          margin: 0 28px 28px 28px;
+          margin: 28px;
           display: flex;
 
           @import 'chat_container';
@@ -91,7 +108,7 @@ html {
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 850px) {
   html body .container {
     flex-direction: column;
 
@@ -100,6 +117,7 @@ html {
     }
 
     .search-container {
+      margin-bottom: 0 !important;
       .home {
         font-family: Carmen Sans;
         font-weight: 600;
@@ -111,6 +129,7 @@ html {
       }
 
       .search-icon {
+        cursor: pointer;
         width: 20px !important;
         margin-left: auto !important;
         background: none !important;
@@ -143,5 +162,25 @@ html {
         }
       }
     }
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  body {
+    .container {
+      .side-bar {
+        position: fixed;
+        z-index: 1;
+      }
+      .responsive {
+        display: block !important;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  body .container .mobile-search {
+    display: none !important;
   }
 }
