@@ -1,0 +1,42 @@
+.mobile-menu {
+  display: flex;
+  height: 95px;
+  flex-direction: row;
+  background: #ffffff;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.16);
+  border-radius: 0 0 20px 20px;
+
+  .menu-icon,
+  .logo-icon,
+  .avatar {
+    display: flex;
+    flex-shrink: 1;
+    flex-grow: 1;
+    align-items: center;
+  }
+
+  .menu-icon {
+    img {
+      margin-left: 15px;
+    }
+  }
+
+  .logo-icon {
+    justify-content: center;
+  }
+
+  .avatar {
+    justify-content: flex-end;
+    .box {
+      width: 53px;
+      height: 52px;
+      border: 2px solid #d75f8d;
+      box-sizing: border-box;
+      border-radius: 100%;
+      margin-right: 20px;
+      img {
+        margin-top: 3px;
+      }
+    }
+  }
+}

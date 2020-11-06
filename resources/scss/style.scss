@@ -4,7 +4,7 @@ $grayText: #747474;
 
 html {
   body {
-    font-family: Carmen Sans;
+    font-family: 'Open Sans';
     font-style: normal;
     width: 100%;
     height: 100%;
@@ -16,6 +16,8 @@ html {
       display: flex;
 
       @import 'sidebar';
+
+      @import 'mobile_menu';
 
       .responsive {
         display: none;
@@ -113,6 +115,7 @@ html {
     flex-direction: column;
 
     .side-bar {
+      width: 100%;
       display: none;
     }
 
@@ -180,7 +183,17 @@ html {
 }
 
 @media only screen and (min-width: 850px) {
-  body .container .mobile-search {
-    display: none !important;
+  body .container {
+    .side-bar {
+      display: flex !important;
+    }
+
+    .mobile-search {
+      display: none !important;
+    }
+
+    .mobile-menu {
+      display: none !important;
+    }
   }
 }

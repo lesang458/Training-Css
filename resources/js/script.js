@@ -6,6 +6,10 @@ $(document).ready(function () {
     } else {
       target.addClass('side-bar-minimized');
     }
+
+    if (screen.width < 850) {
+      target.hide(300);
+    }
   });
 
   $('.search-icon').click(function () {
@@ -14,10 +18,21 @@ $(document).ready(function () {
       target.toggle(300);
     }
   });
+
+  $('#menu').click(function () {
+    var target = $('#side-bar');
+    target.removeClass('side-bar-minimized');
+    target.show(400);
+    target.css('display', 'flex');
+  });
 });
 
 $(document).on('click', function (e) {
-  if ($(e.target).closest('#side-bar').length === 0 && screen.width < 1400) {
+  if (
+    $(e.target).closest('#side-bar').length === 0 &&
+    screen.width < 1400 &&
+    screen.width > 850
+  ) {
     $('#side-bar').addClass('side-bar-minimized');
   }
 });
