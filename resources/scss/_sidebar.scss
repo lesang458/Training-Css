@@ -5,7 +5,7 @@
   flex-direction: column;
   border-radius: 0 15px 15px 0;
   background: #ffffff;
-  transition: width 0.2s;
+  transition-duration: 0.25s;
   .nav-icon {
     display: flex;
     justify-content: flex-end;
@@ -18,7 +18,7 @@
 
   .profile {
     display: flex;
-    margin-left: 20px;
+    padding-left: 30px;
 
     .avatar-img {
       margin-right: 10px;
@@ -26,15 +26,16 @@
       cursor: pointer;
       background-blend-mode: normal;
       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+      border-radius: 50%;
     }
 
     .profile-content {
       display: flex;
       flex-direction: column;
-      align-content: center;
 
       p {
         margin: 4px 0 4px 0;
+        font-family: 'Carmen Sans';
         font-weight: 500;
         font-size: 18px;
         line-height: 18px;
@@ -53,7 +54,8 @@
   }
 
   .main-menu {
-    list-style: none;
+    display: flex;
+    flex-direction: column;
     padding: 0;
     li {
       cursor: pointer;
@@ -64,9 +66,10 @@
 
       &:hover {
         background: #f9c5da;
+
         .content {
           color: $blackText;
-          font-weight: bold;
+          font-weight: 500;
         }
         svg path {
           fill: $pinkColor;
@@ -97,14 +100,14 @@
         align-self: center;
         margin-left: 15px;
         font-family: 'Roboto';
-        font-weight: 500;
+        font-weight: 400;
         font-size: 18px;
         line-height: 18px;
         color: $grayText;
       }
       .active {
         color: $blackText;
-        font-weight: bold;
+        font-weight: 500;
       }
     }
   }
@@ -121,6 +124,7 @@
       font-family: 'Roboto';
       font-size: 18px;
       line-height: 18px;
+      font-weight: 400;
       color: $blackText;
       align-self: center;
     }
@@ -138,17 +142,17 @@
     }
   }
   .profile {
+    padding-left: 0;
+    justify-content: center;
+    .avatar-img {
+      margin-right: 0;
+    }
     .profile-content {
       display: none !important;
     }
   }
   .main-menu {
-    display: flex;
-    flex-direction: column;
     li {
-      width: 100%;
-      display: flex;
-      align-content: center;
       justify-content: center;
       padding-left: 0 !important;
 
@@ -159,7 +163,6 @@
   }
   .logout {
     padding: 0;
-    display: flex;
     justify-content: center;
     .content {
       display: none !important;

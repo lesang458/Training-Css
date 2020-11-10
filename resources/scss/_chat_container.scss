@@ -1,5 +1,5 @@
 .chat-container {
-  flex: 0 1 67%;
+  flex: 0 1 65.9%;
   display: flex;
   flex-direction: column;
 
@@ -14,30 +14,30 @@
 
     .chat-search-container {
       margin: 0 0 28px 0;
+      position: relative;
       display: flex;
       align-content: center;
+      max-width: 100%;
 
       .chat-search-icon {
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        width: 50px;
-        height: 50px;
-        background: #ffffff;
-        border: 2px solid #dbdbdb;
-        border-right: none;
-        box-sizing: border-box;
-        border-radius: 5px 0 0 5px;
+        position: absolute;
+        top: 15px;
+        left: 10px;
       }
 
       .chat-search-input {
         flex: 1;
+        overflow: auto;
         height: 50px;
         background: #ffffff;
         border: 2px solid #dbdbdb;
-        border-left: none;
         box-sizing: border-box;
-        border-radius: 0 5px 5px 0;
+        border-radius: 5px;
+        padding-left: 35px;
+        font-family: 'Roboto';
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
       }
 
       .logo {

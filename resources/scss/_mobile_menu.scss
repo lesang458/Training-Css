@@ -4,14 +4,13 @@
   flex-direction: row;
   background: #ffffff;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.16);
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 30px 30px;
 
   .menu-icon,
   .logo-icon,
   .avatar {
     display: flex;
-    flex-shrink: 1;
-    flex-grow: 1;
+    flex: 0 1 33.33%;
     align-items: center;
   }
 

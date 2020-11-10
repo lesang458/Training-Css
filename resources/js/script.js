@@ -1,14 +1,19 @@
 $(document).ready(function () {
+  if (screen.width > 850 && screen.width < 1400) {
+    $('#side-bar').addClass('side-bar-minimized');
+  }
   $('.navigation-icon').click(function () {
-    var target = $('#side-bar');
-    if (target.hasClass('side-bar-minimized')) {
-      target.removeClass('side-bar-minimized');
+    var sidebar = $('#side-bar');
+    if (screen.width > 850) {
+      if (sidebar.width() == 287) {
+        sidebar.addClass('side-bar-minimized');
+      } else {
+        sidebar.removeClass('side-bar-minimized');
+      }
     } else {
-      target.addClass('side-bar-minimized');
-    }
-
-    if (screen.width < 850) {
-      target.hide(300);
+      $('.main').css('display', 'flex');
+      $('.mobile-menu').css('display', 'flex');
+      sidebar.hide(500);
     }
   });
 
@@ -21,9 +26,17 @@ $(document).ready(function () {
 
   $('#menu').click(function () {
     var target = $('#side-bar');
-    target.removeClass('side-bar-minimized');
-    target.show(400);
+    target.show(500);
     target.css('display', 'flex');
+    $('.main').hide();
+    $('.mobile-menu').hide();
+  });
+  $(window).resize(function () {
+    if (screen.width > 850 && screen.width < 1400) {
+      $('#side-bar').addClass('side-bar-minimized');
+    } else {
+      $('#side-bar').removeClass('side-bar-minimized');
+    }
   });
 });
 

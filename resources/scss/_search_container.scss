@@ -2,18 +2,12 @@
   display: flex;
   align-content: center;
   margin: 28px 28px 0 28px;
+  position: relative;
 
   .search-icon {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    width: 50px;
-    height: 60px;
-    background: #ffffff;
-    border: 2px solid #dbdbdb;
-    border-right: none;
-    box-sizing: border-box;
-    border-radius: 5px 0 0 5px;
+    position: absolute;
+    top: 20px;
+    left: 10px;
   }
 
   .search-input {
@@ -21,9 +15,13 @@
     height: 60px;
     background: #ffffff;
     border: 2px solid #dbdbdb;
-    border-left: none;
     box-sizing: border-box;
-    border-radius: 0 5px 5px 0;
+    border-radius: 5px;
+    padding-left: 35px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
   }
 
   .logo {

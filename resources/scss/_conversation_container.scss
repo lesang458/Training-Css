@@ -2,6 +2,10 @@
   display: flex;
   margin-bottom: 10px;
 
+  img {
+    border-radius: 50%;
+  }
+
   .user-avatar {
     min-width: 53px;
     position: relative;
@@ -67,6 +71,10 @@
     h4 {
       margin: 0;
       font-weight: 400;
+    }
+
+    .message {
+      width: 65%;
     }
   }
 }

@@ -13,15 +13,16 @@
   }
 
   .day {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 22px;
     line-height: 18px;
   }
 
   .month {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 16px;
     line-height: 18px;
+    margin-top: 3px;
   }
 }
 
@@ -31,8 +32,8 @@
   align-self: center;
   font-family: 'Roboto';
   font-weight: 500;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 15px;
+  line-height: 15px;
   letter-spacing: 0.15px;
 }
 
