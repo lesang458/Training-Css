@@ -173,15 +173,20 @@ html {
     }
 
     .community-container .community-content {
-      flex-direction: column;
+      flex-direction: column !important;
 
+      .first-div .image,
       .image {
-        margin-right: 0 !important;
+        margin-left: 0 !important;
         margin-top: 28px;
 
         div {
           font-size: 14px !important;
         }
+      }
+
+      .first-div {
+        flex-direction: column;
       }
     }
   }

@@ -173,15 +173,10 @@ html body .container .side-bar .main-menu li .content {
       align-self: center;
   margin-left: 15px;
   font-family: 'Roboto';
-  font-weight: 400;
+  font-weight: normal;
   font-size: 18px;
   line-height: 18px;
   color: #747474;
-}
-
-html body .container .side-bar .main-menu li .active {
-  color: #262626;
-  font-weight: 500;
 }
 
 html body .container .side-bar .logout {
@@ -413,8 +408,8 @@ html body .container .main .main-content {
 
 html body .container .main .main-content .chat-container {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 65.9%;
-          flex: 0 1 65.9%;
+      -ms-flex: 0 1 66%;
+          flex: 0 1 66%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -495,7 +490,7 @@ html body .container .main .main-content .chat-container .chat-content .conversa
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 html body .container .main .main-content .chat-container .chat-content .conversation-container img {
@@ -785,8 +780,22 @@ html body .container .main .community-container .community-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
+html body .container .main .community-container .community-content .first-div {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 66%;
+          flex: 0 1 66%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html body .container .main .community-container .community-content .first-div .image,
 html body .container .main .community-container .community-content .image {
   position: relative;
   -webkit-box-flex: 1;
@@ -794,7 +803,6 @@ html body .container .main .community-container .community-content .image {
           flex-grow: 1;
   -ms-flex-negative: 1;
       flex-shrink: 1;
-  margin-right: 28px;
   background: #ffffff;
   -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
@@ -807,10 +815,12 @@ html body .container .main .community-container .community-content .image {
   display: flex;
 }
 
+html body .container .main .community-container .community-content .first-div .image img,
 html body .container .main .community-container .community-content .image img {
   border-radius: 5px;
 }
 
+html body .container .main .community-container .community-content .first-div .image div,
 html body .container .main .community-container .community-content .image div {
   position: absolute;
   bottom: 0;
@@ -830,8 +840,14 @@ html body .container .main .community-container .community-content .image div {
   -o-border-radius: 0 25px 0 5px;
 }
 
+html body .container .main .community-container .community-content .last-div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
 html body .container .main .community-container .community-content .last-image {
-  margin-right: 0;
+  margin-left: 28px;
 }
 
 @media only screen and (max-width: 850px) {
@@ -894,17 +910,25 @@ html body .container .main .community-container .community-content .last-image {
     margin-top: 28px;
   }
   html body .container .community-container .community-content {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  html body .container .community-container .community-content .first-div .image,
+  html body .container .community-container .community-content .image {
+    margin-left: 0 !important;
+    margin-top: 28px;
+  }
+  html body .container .community-container .community-content .first-div .image div,
+  html body .container .community-container .community-content .image div {
+    font-size: 14px !important;
+  }
+  html body .container .community-container .community-content .first-div {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  html body .container .community-container .community-content .image {
-    margin-right: 0 !important;
-    margin-top: 28px;
-  }
-  html body .container .community-container .community-content .image div {
-    font-size: 14px !important;
   }
 }
 
